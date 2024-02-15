@@ -5,22 +5,33 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors:{
-      'primary': '#21DF78',
-      'secondary':'#0E88DB',
-      'deepNaviBlue':'#073D55',
-      'highlighter':'#5B6CFF',
-      'stroke':'#C5CCD4',
-      'teal':'#00758F',
-      'orange':'#F28A2D',
-      'red':'#FF4545',
-      'gridLine':'#0E88DB',
-      'background':'#F3F5F8',
-      'white':'#FFFFFF',
-      'black':'#000000'
-
+    container: {
+      center: true,
     },
-    extend: {},
+    fontFamily:{
+      "marck":"'Marck Script','cursive'",
+      "roboto":"'Roboto','sans-serif'",
+      "inter":"'Inter','sans-serif'",
+    },
+    screens:{
+      'md':'850px',
+    },
+    extend: {
+      colors:{
+        'primary': '#21DF78',
+        'secondary':'#0E88DB',
+        'deepNaviBlue':'#073D55',
+        'highlighter':'#5B6CFF',
+        'stroke':'#C5CCD4',
+        'teal':'#00758F',
+        'orange':'#F28A2D',
+        'red':'#FF4545',
+        'gridLine':'#0E88DB',
+        'background':'#F3F5F8',
+        'white':'#FFFFFF',
+        'black':'#000000'
+      },
+    },
   },
   plugins: [],
 }
