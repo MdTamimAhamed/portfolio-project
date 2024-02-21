@@ -1,17 +1,17 @@
-import SocialButton from "../util/SocialButton"
+import SocialButton from "../utils/SocialButton"
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 
 function About() {
   return (
-    <div className="container max-w-[768px] mt-20 font-inter">
+    <div className="container max-w-[768px] mt-20 md:p-8 font-inter">
         <div>
             <p className="text-4xl font-bold text-deepNaviBlue"><span className="text-4xl font-marck ml-1">Hi,</span> I'm Tamim</p>
-            <h1 className="text-[48px] text-transparent font-bold bg-gradient-to-r from-secondary to-primary
+            <h1 className="text-[56px] md:text-[58px] text-transparent font-bold bg-gradient-to-r from-secondary to-primary
              bg-clip-text leading-none tracking-tight">Fullstack Developer.</h1>
         </div>
 
-        <main className="mt-8 font-roboto text-deepNaviBlue md:flex">
+        <main className="mt-8 relative font-roboto text-deepNaviBlue cs:flex justify-between">
             <div>
                 <p>Hello there, I'm Tamim Ahamed, a Full-stack software Developer & UI Designer
                    from Bangladesh.</p>
@@ -19,14 +19,14 @@ function About() {
                    about Full Stack Web Development and and I'm actively seeking 
                    opportunities to apply my skills and contribute to innovative projects.</p>
             </div>
-            <div className="w-full flex justify-center items-center">
-                <img src="/src/images/profile.svg" alt="Profile_Picture" />
+            <div className="w-full flex justify-center md:justify-end items-center cs:-mt-10 md:-mt-10 mx-2">
+                <img src="/src/assets/images/profile.svg" alt="Profile_Picture" />
             </div>
         </main>
 
-        <div className="mt-4">
+        <div className="relative cs:-mt-10 md:-mt-12">
             <p className="font-medium text-deepNaviBlue">Let's connect</p>
-            <div className="mt-1 flex items-center gap-2">
+            <div className="mt-1 flex flex-wrap items-center gap-2">
                 <SocialButton
                     icon={<FaGithub/>}
                     iconName="Github"

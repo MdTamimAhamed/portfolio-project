@@ -13,10 +13,14 @@ export default {
       "roboto":"'Roboto','sans-serif'",
       "inter":"'Inter','sans-serif'",
     },
-    screens:{
-      'md':'850px',
-    },
     extend: {
+      width:{
+        '768':'768px',
+      },
+      screens:{
+        'cs':'680px',
+        'ces':'860px',
+      },
       colors:{
         'primary': '#21DF78',
         'secondary':'#0E88DB',

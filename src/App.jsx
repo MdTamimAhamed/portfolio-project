@@ -1,15 +1,17 @@
 import './App.css'
-import MainBackground from './util/MainBackground'
+import MainBackground from './utils/MainBackground'
 import Navbar from './components/Navbar'
-import About from './sections/About'
+import About from './pages/About'
+import Experience from './pages/Experience'
 
 function App() {
 
   return (
-    <div className='m-6'>
+    <div className='max-w-[908px] mx-auto p-6 font-inter text-deepNaviBlue'>
       <MainBackground/>
       <Navbar/>
       <About/>
+      <Experience/>
     </div>
   )
 }

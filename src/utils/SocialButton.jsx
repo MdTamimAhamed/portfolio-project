@@ -6,7 +6,7 @@ export default function SocialButton({icon,iconName, link}){
         
         <a href={link} className="flex justify-center items-center text-sm tracking-wide font-light hover:text-primary transition-all ease-in" 
            target="_blank">
-            <p>{icon}</p>
+            <p className="text-base">{icon}</p>
             <p className='ml-2'>{iconName}</p>
         </a>
 
