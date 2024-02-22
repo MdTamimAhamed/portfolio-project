@@ -26,7 +26,7 @@ function Navbar() {
     <>
         <div className="sticky top-0 z-50 bg-white rounded-2xl">
             {/* bg-blur div */}
-            <div className="w-24 h-24 absolute -z-50 left-1/2 translate-x-[-50%] blur-[90px] bg-gradient-to-tl from-secondary to-primary rounded-full"></div>
+            {/* <div className="w-24 h-24 absolute -z-50 left-1/2 translate-x-[-50%] blur-[90px] bg-gradient-to-tl from-secondary to-primary rounded-full"></div> */}
             <div className="w-full container  mx-auto px-8 h-[69px] relative flex justify-between items-center ">
                 <TrafficDot/>
                 <ul className={`${toggleNav?'block':'hidden'} w-full md:max-w-[908px] p-8 ces:p-0 absolute ces:flex ces:justify-end ces:static md:bg-none left-0 top-20 rounded-xl

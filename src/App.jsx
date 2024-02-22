@@ -3,6 +3,7 @@ import MainBackground from './utils/MainBackground'
 import Navbar from './components/Navbar'
 import About from './pages/About'
 import Experience from './pages/Experience'
+import Project from './pages/Project'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar/>
       <About/>
       <Experience/>
+      <Project/>
     </div>
   )
 }
