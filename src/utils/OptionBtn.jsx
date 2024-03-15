@@ -3,7 +3,8 @@ import { MdArrowDropDown } from "react-icons/md";
 function OptionBtn({name, dropdown}) {
 
   return (
-    <div className='border-[1px] border-deepNaviBlue rounded-full'>
+    <div className='border-[1px] border-deepNaviBlue/50 hover:bg-deepNaviBlue
+         hover:text-white rounded-full transition-all duration-150 ease-in'>
         <button className="flex items-center h-9 px-6">
             {name}
             <span className={`${!dropdown? 'hidden':'block'} text-2xl`}><MdArrowDropDown/></span>

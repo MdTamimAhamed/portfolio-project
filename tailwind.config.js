@@ -14,13 +14,6 @@ export default {
       "inter":"'Inter','sans-serif'",
     },
     extend: {
-      width:{
-        '768':'768px',
-      },
-      screens:{
-        'cs':'680px',
-        'ces':'860px',
-      },
       colors:{
         'primary': '#21DF78',
         'secondary':'#0E88DB',

@@ -1,5 +1,4 @@
 import './App.css'
-import MainBackground from './utils/MainBackground'
 import Navbar from './components/Navbar'
 import About from './pages/About'
 import Experience from './pages/Experience'
@@ -8,12 +7,13 @@ import Project from './pages/Project'
 function App() {
 
   return (
-    <div className='max-w-[908px] mx-auto p-6 font-inter text-deepNaviBlue'>
-      <MainBackground/>
+    <div className='container max-w-5xl px-2 md:px-4 font-inter text-deepNaviBlue'>
       <Navbar/>
-      <About/>
-      <Experience/>
-      <Project/>
+      <div className=''>
+        <About/>
+        <Experience/>
+        <Project/>
+      </div>
     </div>
   )
 }

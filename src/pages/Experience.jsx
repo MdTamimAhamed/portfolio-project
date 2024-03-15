@@ -33,10 +33,11 @@ function Experience() {
   ]
 
   return (
-    <div className="w-full relative h-auto mt-24 pb-6 rounded-2xl bg-white"> 
-       {/* <div className="w-56 h-56 absolute -z-50 left-56 top-24 translate-x-[-50%] blur-[200px] bg-gradient-to-tl from-secondary to-primary rounded-full"></div> */}
+    <div className="w-full relative h-auto mt-10 pb-6 rounded-2xl bg-white"> 
+       <div className="w-64 h-64 bg-gradient-to-br from-secondary to-primary rounded-full blur-[120px] opacity-50 absolute -top-10 -z-50"></div>
+       <div className="w-72 h-72 bg-gradient-to-br from-secondary to-primary rounded-full blur-[120px] opacity-50 absolute right-40 bottom-10 -z-50"></div>
 
-      <div className="w-[768px] mx-auto p-8">
+      <div className="px-8 lg:px-16 py-12">
         <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Timeline</h1>
         {
           timelines.map((data)=>(
