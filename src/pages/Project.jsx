@@ -39,7 +39,7 @@ function Project() {
 
   return (
     <>
-      <div
+      <section
         id="projects"
         className="mt-10 w-full rounded-2xl bg-white px-8 py-12 font-inter lg:px-16"
       >
@@ -68,7 +68,7 @@ function Project() {
         >
           Show More...
         </button>
-      </div>
+      </section>
     </>
   );
 }

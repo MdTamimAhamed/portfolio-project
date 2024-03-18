@@ -71,7 +71,7 @@ function Skills() {
     <>
       <div
         id="skills"
-        className="mt-10 rounded-2xl bg-white px-8 py-20 lg:px-16"
+        className="mt-10 rounded-2xl bg-white px-8 py-12 lg:px-16"
       >
         <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Skills</h1>
         <div className="flex items-center">

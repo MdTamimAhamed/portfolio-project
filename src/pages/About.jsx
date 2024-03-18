@@ -8,7 +8,7 @@ function About() {
       id="about"
       className=" relative mt-12 grid gap-4 md:grid-cols-3 lg:grid-cols-4"
     >
-      <div className="absolute -top-20 -z-50 h-96 w-96 rounded-full bg-gradient-to-br from-secondary to-primary opacity-30 blur-[120px]"></div>
+      <div className="absolute -top-20 -z-50 h-60 w-60 rounded-full bg-gradient-to-br from-secondary to-primary opacity-30 blur-[120px] sm:h-96 sm:w-96"></div>
       <div className="absolute bottom-0 right-0 -z-50 h-96 w-96 rounded-full bg-gradient-to-br from-secondary to-primary opacity-30   blur-[130px]"></div>
 
       <article className="rounded-2xl bg-white px-8 py-20 md:col-span-2  md:row-span-2 lg:col-span-3 lg:px-16">
@@ -17,7 +17,7 @@ function About() {
           I'm Tamim
         </h3>
         <h1
-          className=" animate-wiggle bg-gradient-to-r from-secondary to-primary bg-clip-text 
+          className=" bg-gradient-to-r from-secondary to-primary bg-clip-text 
           text-[34px]  font-bold tracking-tight text-transparent sm:text-5xl md:text-[40px]  
           lg:text-[56px]"
         >
