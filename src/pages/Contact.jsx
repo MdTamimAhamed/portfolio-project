@@ -15,7 +15,7 @@ function Contact() {
     <>
       <main
         id="contact"
-        className="mt-10 rounded-2xl bg-white px-8 py-12 lg:px-16"
+        className="mt-10 rounded-2xl bg-white px-6 py-12 lg:px-16"
       >
         <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Contact</h1>
         <div>

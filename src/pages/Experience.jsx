@@ -39,7 +39,7 @@ function Experience() {
       <div className="absolute -top-10 -z-50 h-64 w-64 rounded-full bg-gradient-to-br from-secondary to-primary opacity-50 blur-[120px]"></div>
       <div className="absolute bottom-10 right-40 -z-50 h-72 w-72 rounded-full bg-gradient-to-br from-secondary to-primary opacity-50 blur-[120px]"></div>
 
-      <div className="px-8 py-12 lg:px-16">
+      <div className="px-6 py-12 lg:px-16">
         <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Timeline</h1>
         {timelines.map((data) => (
           <span key={data.id}>

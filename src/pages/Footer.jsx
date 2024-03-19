@@ -4,7 +4,7 @@ import { RiInstagramFill } from "react-icons/ri";
 
 function Footer() {
   return (
-    <section className="rounded-rt-2xl mt-10 flex w-full justify-between rounded-tl-2xl rounded-tr-2xl bg-white px-8 py-12 font-inter lg:px-16">
+    <section className="rounded-rt-2xl mt-10 flex w-full justify-between rounded-tl-2xl rounded-tr-2xl bg-white px-6 py-12 font-inter lg:px-16">
       <div>
         <h1 className="mb-2 font-semibold">Follow me on</h1>
         <div className="flex flex-wrap items-center justify-start gap-2">

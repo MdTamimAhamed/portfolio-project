@@ -41,7 +41,7 @@ function Project() {
     <>
       <section
         id="projects"
-        className="mt-10 w-full rounded-2xl bg-white px-8 py-12 font-inter lg:px-16"
+        className="mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter lg:px-16"
       >
         <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Projects</h1>
         <div className="flex flex-wrap gap-2">

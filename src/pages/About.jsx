@@ -11,7 +11,7 @@ function About() {
       <div className="absolute -top-20 -z-50 h-60 w-60 rounded-full bg-gradient-to-br from-secondary to-primary opacity-30 blur-[120px] sm:h-96 sm:w-96"></div>
       <div className="absolute bottom-0 right-0 -z-50 h-96 w-96 rounded-full bg-gradient-to-br from-secondary to-primary opacity-30   blur-[130px]"></div>
 
-      <article className="rounded-2xl bg-white px-8 py-20 md:col-span-2  md:row-span-2 lg:col-span-3 lg:px-16">
+      <article className="rounded-2xl bg-white px-6 py-20 md:col-span-2  md:row-span-2 lg:col-span-3 lg:px-16">
         <h3 className="text-3xl font-bold leading-4 tracking-tight sm:leading-none">
           <span className="font-marck">Hi, </span>
           I'm Tamim
