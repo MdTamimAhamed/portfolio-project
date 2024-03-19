@@ -40,7 +40,7 @@ function About() {
 
       <figure className="flex items-center justify-center rounded-2xl bg-white py-4">
         <img
-          src="../../src/assets/images/profile.svg"
+          src="/assets/images/profile.svg"
           alt="user profile picture"
           className="py-2 transition-transform duration-300 ease-in hover:scale-105"
         />

@@ -1,9 +1,9 @@
 import OptionBtn from "../utils/OptionBtn";
 import ProjectCard from "../utils/ProjectCard";
 
-import Thumbnail1 from "/src/assets/images/Project1.png";
-import Thumbnail2 from "/src/assets/images/project2.png";
-import Thumbnail from "/src/assets/images/commingsoon.jpg";
+import Thumbnail1 from "/assets/images/Project1.png";
+import Thumbnail2 from "/assets/images/project2.png";
+import Thumbnail from "/assets/images/commingsoon.jpg";
 
 function Project() {
   const ProjectDetails = [
