@@ -3,14 +3,17 @@ import { MdSunny } from "react-icons/md";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { MdDarkMode } from "react-icons/md";
 import TrafficDot from "../utils/TrafficDot";
+import { IoConstructSharp } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
 import { useEffect, useRef, useState } from "react";
 
 function Navbar({ setState }) {
   const [toggleNav, setToggleNav] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [construction, setConstrunction] = useState(true);
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem("themeMode");
-    return savedMode === "dark";
+    return savedMode === "light";
   });
 
   const navReference = useRef(null);
@@ -32,12 +35,12 @@ function Navbar({ setState }) {
   function toggleDarkMode() {
     const newMode = !darkMode;
     setDarkMode(newMode);
-    localStorage.setItem("themeMode", newMode ? "dark" : "light");
+    localStorage.setItem("themeMode", !newMode ? "dark" : "light");
   }
 
   useEffect(() => {
     const savedMode = localStorage.getItem("themeMode");
-    setState(savedMode === "dark" ? true : false);
+    setState(savedMode === "light" ? false : true);
   });
 
   //burger menu - onclick show and hide
@@ -84,11 +87,31 @@ function Navbar({ setState }) {
     });
   };
 
+  function handleConstructionMsg() {
+    setConstrunction(!construction);
+  }
+
   return (
     <>
       <div
         className={`${!isVisible ? "-translate-y-20" : ""} sticky top-2 z-50 transition-all duration-200 ease-in`}
       >
+        {/* Under construction section */}
+        <div
+          className={`${construction ? "block" : "hidden"} relative mb-2 w-full rounded-md border-l-4 border-l-yellow-600 bg-yellow-200 py-2`}
+        >
+          <RxCross2
+            onClick={handleConstructionMsg}
+            className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer text-yellow-700"
+          />
+          <div className="flex items-center justify-center text-yellow-700">
+            <IoConstructSharp />
+            <p className="ml-2 text-sm">
+              This website is under construction...
+            </p>
+          </div>
+        </div>
+
         <div
           className={`relative flex h-[69px] w-full items-center rounded-xl border-[1px] border-deepNaviBlue/10 bg-white px-8 shadow-sm backdrop-blur-md  dark:border-gray-700 dark:bg-darkMode-background/90`}
         >
@@ -111,7 +134,7 @@ function Navbar({ setState }) {
               ))}
             </ul>
             <button>
-              {!darkMode ? (
+              {darkMode ? (
                 <MdDarkMode
                   onClick={toggleDarkMode}
                   className=" cursor-pointer dark:text-darkMode-textGray"
