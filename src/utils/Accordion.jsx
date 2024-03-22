@@ -8,7 +8,7 @@ function Accordion({ question, answer }) {
   return (
     <button
       onClick={() => setToggleAns(!toggleAns)}
-      className="mt-4 w-full rounded-xl border-[1px] border-deepNaviBlue/20 p-6"
+      className="mt-4 w-full rounded-xl border-[1px] border-deepNaviBlue/20 p-6 dark:border-darkMode-textGray/20"
     >
       <div className="flex justify-between text-lg font-medium">
         <p className="pr-2 text-left md:pr-4">{question}</p>

@@ -71,19 +71,21 @@ function Skills() {
     <>
       <div
         id="skills"
-        className="mt-10 rounded-2xl bg-white px-6 py-12 lg:px-16"
+        className="dark:bg-darkMode-background dark:text-darkMode-textGray mt-10 rounded-2xl bg-white px-6 py-12 lg:px-16"
       >
-        <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Skills</h1>
+        <h1 className=" dark:text-darkMode-textGray pb-4 text-xl font-bold text-deepNaviBlue">
+          Skills
+        </h1>
         <div className="flex items-center">
-          <MdCheck className="text-xl" />
-          <h1 className="ml-1 font-medium">Primary Skills</h1>
+          <MdCheck className="dark:text-darkMode-green text-xl" />
+          <h1 className=" ml-1 font-medium">Primary Skills</h1>
         </div>
 
         <figure className="mt-2 grid grid-cols-3 gap-4 sm:grid-cols-4  mdx:grid-cols-5 lg:grid-cols-6">
           {PrimarySkillIcons.map((data) => (
             <div
-              className="flex h-28 w-full cursor-default  flex-col items-center justify-center rounded-xl border-[1px] border-deepNaviBlue/20 transition-all
-                  duration-200 ease-in hover:bg-primary/10 md:h-32 md:w-32"
+              className="dark:border-darkMode-textGray/20 hover:dark:bg-darkMode-textGray/10 flex h-28 w-full  cursor-default flex-col items-center justify-center rounded-xl border-[1px] border-deepNaviBlue/20 transition-all
+                  duration-200 ease-linear hover:scale-105 hover:bg-primary/10 md:h-32 md:w-32"
               key={data.id}
             >
               <span className="text-4xl">{data.icon}</span>
@@ -95,7 +97,7 @@ function Skills() {
         </figure>
 
         <div className="mt-8 flex items-center">
-          <MdCheck className="text-xl" />
+          <MdCheck className="dark:text-darkMode-green text-xl " />
           <h1 className="ml-1 font-medium">Extra Skills</h1>
         </div>
 
@@ -103,9 +105,9 @@ function Skills() {
           {ExtraSkillIcons.map((data) => (
             <div
               key={data.id}
-              className="relative flex h-28 w-full cursor-default  flex-col items-center justify-center
-              rounded-xl border-[1px] border-deepNaviBlue/20 transition-all
-              duration-200 ease-in hover:bg-primary/10 md:h-32 md:w-32"
+              className="dark:border-darkMode-textGray/20 hover:dark:bg-darkMode-textGray/10 relative flex h-28  w-full cursor-default flex-col items-center
+              justify-center rounded-xl border-[1px] border-deepNaviBlue/20
+              transition-all duration-200 ease-linear hover:scale-105 hover:bg-primary/10 md:h-32 md:w-32"
             >
               <span className="text-4xl">{data.icon}</span>
               <span className="mt-2 text-sm font-semibold">

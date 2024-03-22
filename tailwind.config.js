@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
@@ -24,6 +25,12 @@ export default {
         background: "#F3F5F8",
         white: "#FFFFFF",
         black: "#000000",
+
+        darkMode: {
+          textGray: "#c9d1db",
+          background: "#1F2937",
+          green: "#21DF78",
+        },
       },
       screens: {
         mdx: "850px",

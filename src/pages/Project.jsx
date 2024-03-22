@@ -41,9 +41,11 @@ function Project() {
     <>
       <section
         id="projects"
-        className="mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter lg:px-16"
+        className="dark:bg-darkMode-background mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter lg:px-16"
       >
-        <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Projects</h1>
+        <h1 className="dark:text-darkMode-textGray pb-4 text-xl font-bold text-deepNaviBlue">
+          Projects
+        </h1>
         <div className="flex flex-wrap gap-2">
           <OptionBtn name="All" />
           <OptionBtn name="Web Projects" dropdown={true} />
@@ -63,8 +65,8 @@ function Project() {
           ))}
         </div>
         <button
-          className="mt-4 h-10 rounded-full
-         border-[1px] border-deepNaviBlue/50 px-4 text-sm hover:bg-deepNaviBlue hover:text-white"
+          className="dark:border-darkMode-textGray/20 dark:text-darkMode-textGray hover:dark:bg-darkMode-green
+         hover:dark:border-darkMode-green hover:dark:text-darkMode-background mt-4 h-10 rounded-full border-[1px] border-deepNaviBlue/50 px-4 text-sm hover:bg-deepNaviBlue hover:text-white"
         >
           Show More...
         </button>

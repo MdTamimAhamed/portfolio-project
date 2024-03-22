@@ -34,9 +34,9 @@ function FAQ() {
     <>
       <section
         id="faq"
-        className="mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter lg:px-16"
+        className="mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter dark:bg-darkMode-background dark:text-darkMode-textGray lg:px-16"
       >
-        <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">
+        <h1 className="pb-4 text-xl font-bold text-deepNaviBlue dark:text-darkMode-textGray">
           Frequently Asked Question
         </h1>
         <article>

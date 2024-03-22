@@ -9,18 +9,19 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  console.log(name);
 
   return (
     <>
       <main
         id="contact"
-        className="mt-10 rounded-2xl bg-white px-6 py-12 lg:px-16"
+        className="mt-10 rounded-2xl bg-white px-6 py-12 dark:bg-darkMode-background dark:text-darkMode-textGray lg:px-16"
       >
-        <h1 className="pb-4 text-xl font-bold text-deepNaviBlue">Contact</h1>
+        <h1 className="pb-4 text-xl font-bold text-deepNaviBlue dark:text-darkMode-textGray">
+          Contact
+        </h1>
         <div>
           <h1
-            className=" bg-gradient-to-r from-secondary to-primary bg-clip-text 
+            className=" bg-gradient-to-r from-secondary via-primary via-60%  to-primary to-10% bg-clip-text 
             pb-2 text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl"
           >
             Seeking Collab?
@@ -38,15 +39,17 @@ function Contact() {
                 <SocialButton icon={<BsWhatsapp />} ctaName="Whatsapp" />
               </div>
               <div>
-                <p className="text-sm font-medium text-deepNaviBlue text-deepNaviBlue/50">
+                <p className="text-sm font-medium text-deepNaviBlue text-deepNaviBlue/50 dark:text-darkMode-textGray/90">
                   **Typical response time{" "}
-                  <span className="font-bold text-highlighter">@1 hour</span>
+                  <span className="font-bold text-highlighter dark:text-darkMode-green">
+                    @1 hour
+                  </span>
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-4 rounded-2xl border-[1px] p-4">
+          <div className="mt-4 rounded-2xl border-[1px] p-4 dark:border-darkMode-textGray/20">
             <form className=" mx-auto my-4 w-full max-w-[480px] sm:my-10 md:my-16">
               <FormInputHandler
                 state={name}
@@ -61,7 +64,7 @@ function Contact() {
                 placeholderText="Email"
               />
               <textarea
-                className="mt-1 w-full rounded-xl border-[1px] border-deepNaviBlue/30 px-4 py-4 outline-secondary/20"
+                className=" mt-1 w-full rounded-xl border-[1px] border-deepNaviBlue/30 px-4 py-4 outline-none dark:bg-white/5"
                 cols="30"
                 rows="5"
                 placeholder="Message here..."
@@ -69,10 +72,13 @@ function Contact() {
 
               <button
                 type="button"
-                className="text-whitep mt-4 flex w-full cursor-pointer items-center justify-center gap-1 rounded-xl bg-deepNaviBlue py-3 font-medium text-white transition-all duration-150 ease-in hover:bg-deepNaviBlue/90"
+                className="text-whitep group mt-4
+                 flex w-full cursor-pointer items-center justify-center gap-1 rounded-xl 
+                 bg-deepNaviBlue py-3 font-medium text-white transition-all duration-200 ease-in 
+                 hover:bg-deepNaviBlue/90 dark:bg-darkMode-textGray dark:text-darkMode-background hover:dark:bg-darkMode-green"
               >
                 Send
-                <IoMdSend className="text-xl text-primary" />
+                <IoMdSend className="text-xl text-primary transition-all duration-200 ease-in group-hover:ml-2 dark:text-darkMode-background" />
               </button>
             </form>
           </div>

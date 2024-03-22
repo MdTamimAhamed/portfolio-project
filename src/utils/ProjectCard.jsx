@@ -14,16 +14,18 @@ function ProjectCard({ thumbnail, title, description, category }) {
 
   return (
     <>
-      <div className=" rounded-3xl border-[1px]  p-4">
+      <div className=" dark:border-darkMode-textGray/20 rounded-3xl border-[1px]  p-4">
         <figure className="h-auto w-full overflow-hidden rounded-2xl">
           <img
             className="w-full rounded-2xl transition-transform duration-200 ease-in hover:scale-105"
             src={thumbnail}
           />
         </figure>
-        <article className="mt-6 h-20">
-          <p className="text-sm text-highlighter">{category}</p>
-          <h1 className="text-lg font-bold">{title} </h1>
+        <article className="dark:text-darkMode-textGray mt-6 h-20">
+          <p className="dark:text-darkMode-green text-sm text-highlighter">
+            {category}
+          </p>
+          <h1 className=" text-lg font-bold">{title} </h1>
           <p className="leading-5">{description}</p>
         </article>
         <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:gap-4 md:flex-col  md:gap-2 lg:flex-row">

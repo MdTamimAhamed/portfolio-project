@@ -1,12 +1,17 @@
 import { HashLink } from "react-router-hash-link";
 import { MdSunny } from "react-icons/md";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { MdDarkMode } from "react-icons/md";
 import TrafficDot from "../utils/TrafficDot";
 import { useEffect, useRef, useState } from "react";
 
-function Navbar() {
+function Navbar({ setState }) {
   const [toggleNav, setToggleNav] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("themeMode");
+    return savedMode === "dark";
+  });
 
   const navReference = useRef(null);
 
@@ -23,6 +28,17 @@ function Navbar() {
   function toggleNavbar(e) {
     setToggleNav(!toggleNav);
   }
+
+  function toggleDarkMode() {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem("themeMode", newMode ? "dark" : "light");
+  }
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem("themeMode");
+    setState(savedMode === "dark" ? true : false);
+  });
 
   //burger menu - onclick show and hide
   useEffect(() => {
@@ -73,18 +89,20 @@ function Navbar() {
       <div
         className={`${!isVisible ? "-translate-y-20" : ""} sticky top-2 z-50 transition-all duration-200 ease-in`}
       >
-        <div className="relative flex h-[69px] w-full items-center rounded-xl border-[1px] border-deepNaviBlue/10 bg-white/85 px-8 shadow-sm backdrop-blur-md">
+        <div
+          className={`relative flex h-[69px] w-full items-center rounded-xl border-[1px] border-deepNaviBlue/10 bg-white px-8 shadow-sm backdrop-blur-md  dark:border-gray-700 dark:bg-darkMode-background/90`}
+        >
           <nav className="flex w-full items-center justify-between ">
             <TrafficDot />
             <ul
               className={`${toggleNav ? "block" : "hidden"} absolute left-0 top-20 z-10 w-full rounded-xl 
-             bg-white px-2 py-6 shadow-md md:static md:top-0 md:z-0 md:flex md:items-center md:justify-center md:bg-transparent md:p-0 md:shadow-none`}
+             bg-white px-2 py-6 shadow-md dark:bg-gray-700 md:static md:top-0 md:z-0 md:flex md:items-center md:justify-center md:bg-transparent md:p-0 md:shadow-none md:dark:bg-transparent`}
             >
               {NavElements.map((data) => (
                 <li
                   key={data.id}
-                  className="mx-4 cursor-pointer rounded-md p-2  transition-all 
-                 duration-150 ease-in hover:bg-black/5 md:mx-2"
+                  className="mx-4 cursor-pointer rounded-md p-2  transition-all duration-150 
+                 ease-in hover:bg-black/5 dark:text-darkMode-textGray hover:dark:bg-darkMode-textGray/15 md:mx-2"
                 >
                   <HashLink onClick={scrollToTop} to={data.path}>
                     <span className="pl-2 md:pl-0">{data.item}</span>
@@ -92,12 +110,24 @@ function Navbar() {
                 </li>
               ))}
             </ul>
-            <MdSunny className=" cursor-pointer" />
+            <button>
+              {!darkMode ? (
+                <MdDarkMode
+                  onClick={toggleDarkMode}
+                  className=" cursor-pointer dark:text-darkMode-textGray"
+                />
+              ) : (
+                <MdSunny
+                  onClick={toggleDarkMode}
+                  className=" cursor-pointer dark:text-yellow-500"
+                />
+              )}
+            </button>
           </nav>
           <div ref={navReference}>
             <HiOutlineMenuAlt3
               onClick={toggleNavbar}
-              className={`ml-6 cursor-pointer text-2xl md:hidden`}
+              className={`ml-6 cursor-pointer text-2xl dark:text-darkMode-textGray md:hidden`}
             />
           </div>
         </div>
