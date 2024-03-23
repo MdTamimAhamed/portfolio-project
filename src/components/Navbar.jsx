@@ -94,7 +94,7 @@ function Navbar({ setState }) {
   return (
     <>
       <div
-        className={`${!isVisible ? "-translate-y-20" : ""} sticky top-2 z-50 transition-all duration-200 ease-in`}
+        className={`${!isVisible ? "-translate-y-40" : ""} sticky top-2 z-50 transition-all duration-200 ease-linear`}
       >
         {/* Under construction section */}
         <div

@@ -9,7 +9,7 @@ function CTABtn({ cta_name, border, icon_visivility, link }) {
           ? "border-[1px] border-deepNaviBlue bg-transparent hover:border-primary hover:bg-primary dark:border-darkMode-textGray dark:text-darkMode-textGray hover:dark:border-darkMode-green hover:dark:text-darkMode-background"
           : "bg-deepNaviBlue text-white hover:bg-primary hover:text-deepNaviBlue dark:bg-darkMode-textGray dark:text-darkMode-background hover:dark:bg-darkMode-green"
       } 
-    group flex h-12 w-full cursor-pointer items-center justify-center rounded-xl px-6 font-medium  transition-all duration-150 ease-in md:h-10 md:w-36`}
+    group flex h-12 w-full cursor-pointer items-center justify-center rounded-md px-6 font-medium  transition-all duration-150 ease-in md:h-10 md:w-36`}
     >
       {cta_name === "Resume" ? (
         <a

@@ -35,15 +35,38 @@ function Project() {
       des: "Under Construction",
       category: "None",
     },
+    {
+      id: 5,
+      thumbnail: Thumbnail,
+      title: "Coming soon",
+      des: "Under Construction",
+      category: "None",
+    },
+    {
+      id: 6,
+      thumbnail: Thumbnail,
+      title: "Coming soon",
+      des: "Under Construction",
+      category: "None",
+    },
+    {
+      id: 7,
+      thumbnail: Thumbnail,
+      title: "Coming soon",
+      des: "Under Construction",
+      category: "None",
+    },
   ];
+
+  function handleCardLoad() {}
 
   return (
     <>
       <section
         id="projects"
-        className="dark:bg-darkMode-background mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter lg:px-16"
+        className="mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter dark:bg-darkMode-background lg:px-16"
       >
-        <h1 className="dark:text-darkMode-textGray pb-4 text-xl font-bold text-deepNaviBlue">
+        <h1 className="pb-4 text-xl font-bold text-deepNaviBlue dark:text-darkMode-textGray">
           Projects
         </h1>
         <div className="flex flex-wrap gap-2">
@@ -65,8 +88,9 @@ function Project() {
           ))}
         </div>
         <button
-          className="dark:border-darkMode-textGray/20 dark:text-darkMode-textGray hover:dark:bg-darkMode-green
-         hover:dark:border-darkMode-green hover:dark:text-darkMode-background mt-4 h-10 rounded-full border-[1px] border-deepNaviBlue/50 px-4 text-sm hover:bg-deepNaviBlue hover:text-white"
+          onClick={handleCardLoad}
+          className="mt-4 h-10 rounded-full
+         border-[1px] border-deepNaviBlue/50 px-4 text-sm hover:bg-deepNaviBlue hover:text-white dark:border-darkMode-textGray/20 dark:text-darkMode-textGray hover:dark:border-darkMode-green hover:dark:bg-darkMode-green hover:dark:text-darkMode-background"
         >
           Show More...
         </button>
