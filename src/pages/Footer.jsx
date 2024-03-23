@@ -7,7 +7,7 @@ function Footer() {
     <section className="rounded-rt-2xl mt-10 w-full justify-between rounded-tl-2xl rounded-tr-2xl bg-white px-6 py-12 font-inter dark:bg-darkMode-background dark:text-darkMode-textGray sm:flex lg:px-16">
       <div className="flex flex-col">
         <div className="flex items-center justify-start">
-          <img src="/public/assets/images/care.svg" alt="care emoji" />
+          <img src="/assets/images/care.svg" alt="care_emoji" />
           <h1 className="ml-2 font-semibold">Crafted with care by me</h1>
         </div>
         <p className="text-left text-[12px] sm:text-right">
