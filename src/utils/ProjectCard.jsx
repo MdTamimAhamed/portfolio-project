@@ -3,26 +3,17 @@ import ProjectCTABtn from "./ProjectCTABtn";
 import { motion } from "framer-motion";
 
 function ProjectCard({ thumbnail, title, description, category }) {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const currentScrollPosition = window.scrollY;
-    console.log(currentScrollPosition);
-
-    return () => {};
-  }, []);
-
   return (
     <>
-      <div className=" dark:border-darkMode-textGray/20 rounded-3xl border-[1px]  p-4">
+      <div className=" rounded-3xl border-[1px] p-4  dark:border-darkMode-textGray/20">
         <figure className="h-auto w-full overflow-hidden rounded-2xl">
           <img
             className="w-full rounded-2xl transition-transform duration-200 ease-in hover:scale-105"
             src={thumbnail}
           />
         </figure>
-        <article className="dark:text-darkMode-textGray mt-6 h-20">
-          <p className="dark:text-darkMode-green text-sm text-highlighter">
+        <article className="mt-6 h-20 dark:text-darkMode-textGray">
+          <p className="text-sm text-highlighter dark:text-darkMode-green">
             {category}
           </p>
           <h1 className=" text-lg font-bold">{title} </h1>

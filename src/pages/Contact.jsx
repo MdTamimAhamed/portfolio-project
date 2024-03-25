@@ -4,11 +4,46 @@ import { BsWhatsapp } from "react-icons/bs";
 import FormInputHandler from "../utils/FormInputHandler";
 import { useState } from "react";
 import { IoMdSend } from "react-icons/io";
+import axios from "axios";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  //Emailjs IDs
+  const service_id = "service_a7qd5rr";
+  const template_id = "template_dk6nv7u";
+  const public_key = "1N2CpNzOsF5AMbxmH";
+
+  async function sendEmail(e) {
+    e.preventDefault();
+
+    const Data = {
+      service_id: service_id,
+      template_id: template_id,
+      user_id: public_key,
+
+      template_params: {
+        from_name: name,
+        from_email: email,
+        to_name: "tamim ahamed",
+        message: message,
+      },
+    };
+
+    try {
+      const response = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        Data,
+      );
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -35,8 +70,16 @@ function Contact() {
             <h3 className="font-semibold">Direct message</h3>
             <div className="flex flex-col items-baseline justify-between gap-4 sm:flex-row">
               <div className="mt-2 flex flex-wrap gap-2">
-                <SocialButton icon={<FaTelegramPlane />} ctaName="Telegram" />
-                <SocialButton icon={<BsWhatsapp />} ctaName="Whatsapp" />
+                <SocialButton
+                  icon={<FaTelegramPlane />}
+                  ctaName="Telegram"
+                  link="https://t.me/Tamim_Tomim"
+                />
+                <SocialButton
+                  icon={<BsWhatsapp />}
+                  ctaName="Whatsapp"
+                  link="https://wa.me/8801629749167?text=Hello,%20there!"
+                />
               </div>
               <div>
                 <p className="text-sm font-medium text-deepNaviBlue text-deepNaviBlue/50 dark:text-darkMode-textGray/90">
@@ -50,7 +93,10 @@ function Contact() {
           </div>
 
           <div className="mt-4 rounded-2xl border-[1px] p-4 dark:border-darkMode-textGray/20">
-            <form className=" mx-auto my-4 w-full max-w-[480px] sm:my-10 md:my-16">
+            <form
+              onSubmit={sendEmail}
+              className=" mx-auto my-4 w-full max-w-[480px] sm:my-10 md:my-16"
+            >
               <FormInputHandler
                 state={name}
                 setState={setName}
@@ -68,10 +114,13 @@ function Contact() {
                 cols="30"
                 rows="5"
                 placeholder="Message here..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
 
               <button
-                type="button"
+                type="submit"
+                onSubmit={sendEmail}
                 className="text-whitep group mt-4
                  flex w-full cursor-pointer items-center justify-center gap-1 rounded-xl 
                  bg-deepNaviBlue py-3 font-medium text-white transition-all duration-200 ease-in 

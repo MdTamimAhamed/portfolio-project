@@ -11,7 +11,7 @@ function Footer() {
           <h1 className="ml-2 font-semibold">Crafted with care by me</h1>
         </div>
         <p className="text-left text-[12px] sm:text-right">
-          &copy; tamim ahamed 2024 | All rights reserved.{" "}
+          &copy; tamim ahamed 2024 | All rights reserved.
         </p>
       </div>
       <div className="mt-8 sm:mt-0">
