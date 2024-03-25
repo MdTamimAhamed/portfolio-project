@@ -7,6 +7,7 @@ function FormInputHandler({ type, placeholderText, state, setState }) {
         placeholder={placeholderText}
         value={state}
         onChange={(e) => setState(e.target.value)}
+        required
       />
     </>
   );

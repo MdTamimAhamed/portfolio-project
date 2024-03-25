@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [darkClass, setDarkClass] = useState(false);
+  const [modalMessage, setModalMessage] = useState(false);
 
   return (
     <div className={`${darkClass ? "dark" : ""}`}>
@@ -20,6 +21,18 @@ function App() {
         bg-[size:15px_15px]
          dark:bg-gray-900 dark:bg-[linear-gradient(to_right,#132131_1px,transparent_1px),linear-gradient(to_bottom,#132131_1px,transparent_1px)]`}
       >
+        <div
+          className={`${modalMessage ? "translate-y-10 opacity-100" : "-translate-y-40 opacity-0"} fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-md bg-green-200 px-8 py-4 
+          shadow-xl shadow-primary/10 transition-all ${!modalMessage ? "duration-500" : "duration-300"} ease-out`}
+        >
+          <p className="font-semibold text-green-700">
+            Your message sent successfully!
+          </p>
+          <p className="text-center text-sm text-green-700">
+            You will get a response soon!
+          </p>
+        </div>
+
         <div className=" container w-full px-2 font-inter text-deepNaviBlue transition-all duration-300 ease-out sm:max-w-5xl md:px-4">
           <Navbar setState={setDarkClass} />
           <div className="">
@@ -27,7 +40,7 @@ function App() {
             <Experience />
             <Project />
             <Skills />
-            <Contact />
+            <Contact setModalMessage={setModalMessage} />
             <FAQ />
             <Footer />
           </div>

@@ -6,10 +6,11 @@ import { useState } from "react";
 import { IoMdSend } from "react-icons/io";
 import axios from "axios";
 
-function Contact() {
+function Contact({ setModalMessage }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [messageSize, setMessageSize] = useState("");
 
   //Emailjs IDs
   const service_id = "service_a7qd5rr";
@@ -33,15 +34,25 @@ function Contact() {
     };
 
     try {
-      const response = await axios.post(
-        "https://api.emailjs.com/api/v1.0/email/send",
-        Data,
-      );
-      setName("");
-      setEmail("");
-      setMessage("");
+      if (message.length > 6) {
+        const response = await axios.post(
+          "https://api.emailjs.com/api/v1.0/email/send",
+          Data,
+        );
+        if (response.status === 200) {
+          setModalMessage(true);
+          setTimeout(() => {
+            setModalMessage(false);
+          }, 2000);
+          setName("");
+          setEmail("");
+          setMessage("");
+        }
+      } else {
+        setMessageSize("Message length required at least 6 char!");
+      }
     } catch (error) {
-      console.log(error);
+      setModalMessage(error);
     }
   }
 
@@ -117,10 +128,16 @@ function Contact() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
+              {messageSize ? (
+                <p className="text-sm text-red">{messageSize}</p>
+              ) : (
+                ""
+              )}
 
               <button
                 type="submit"
                 onSubmit={sendEmail}
+                aria-required
                 className="text-whitep group mt-4
                  flex w-full cursor-pointer items-center justify-center gap-1 rounded-xl 
                  bg-deepNaviBlue py-3 font-medium text-white transition-all duration-200 ease-in 

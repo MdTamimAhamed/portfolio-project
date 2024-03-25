@@ -94,11 +94,11 @@ function Navbar({ setState }) {
   return (
     <>
       <div
-        className={`${!isVisible ? "-translate-y-40" : ""} sticky top-2 z-50 transition-all duration-200 ease-linear`}
+        className={`${!isVisible ? "-translate-y-40" : ""} sticky top-2 z-40 transition-all duration-200 ease-linear`}
       >
         {/* Under construction section */}
         <div
-          className={`${construction ? "block" : "hidden"} relative mb-2 w-full rounded-md border-l-4 border-l-yellow-600 bg-yellow-200 py-2`}
+          className={`${construction ? "block" : "hidden"} relative z-40 mb-2 w-full rounded-md border-l-4 border-l-yellow-600 bg-yellow-200 py-2`}
         >
           <RxCross2
             onClick={handleConstructionMsg}
