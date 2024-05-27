@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Timeline({ when, what, where, status }) {
   return (
     <div>

@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import ProjectCTABtn from "./ProjectCTABtn";
-import { motion } from "framer-motion";
 
 function ProjectCard({ thumbnail, title, description, category }) {
   return (

@@ -1,10 +1,10 @@
-import SocialButton from "../utils/SocialButton";
-import { FaTelegramPlane } from "react-icons/fa";
-import { BsWhatsapp } from "react-icons/bs";
-import FormInputHandler from "../utils/FormInputHandler";
-import { useState } from "react";
-import { IoMdSend } from "react-icons/io";
 import axios from "axios";
+import { useState } from "react";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaTelegramPlane } from "react-icons/fa";
+import { IoMdSend } from "react-icons/io";
+import FormInputHandler from "../utils/FormInputHandler";
+import SocialButton from "../utils/SocialButton";
 
 function Contact({ setModalMessage }) {
   const [name, setName] = useState("");

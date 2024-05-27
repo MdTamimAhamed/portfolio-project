@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { MdOutlineExpandMore } from "react-icons/md";
 import { FaHandPointRight } from "react-icons/fa6";
+import { MdOutlineExpandMore } from "react-icons/md";
 
 function Accordion({ question, answer }) {
   const [toggleAns, setToggleAns] = useState(false);

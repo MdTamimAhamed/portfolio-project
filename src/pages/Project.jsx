@@ -2,8 +2,8 @@ import OptionBtn from "../utils/OptionBtn";
 import ProjectCard from "../utils/ProjectCard";
 
 import Thumbnail1 from "/assets/images/Project1.png";
-import Thumbnail2 from "/assets/images/project2.png";
 import Thumbnail from "/assets/images/commingsoon.jpg";
+import Thumbnail2 from "/assets/images/project2.png";
 
 function Project() {
   const ProjectDetails = [
@@ -64,7 +64,7 @@ function Project() {
     <>
       <section
         id="projects"
-        className="mt-10 w-full rounded-2xl bg-white px-6 py-12 font-inter dark:bg-darkMode-background lg:px-16"
+        className="mt-10 w-full rounded-2xl px-6 py-12 font-inter dark:bg-darkMode-background"
       >
         <h1 className="pb-4 text-xl font-bold text-deepNaviBlue dark:text-darkMode-textGray">
           Projects

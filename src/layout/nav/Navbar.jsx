@@ -1,11 +1,8 @@
-import { HashLink } from "react-router-hash-link";
-import { MdSunny } from "react-icons/md";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { MdDarkMode } from "react-icons/md";
-import TrafficDot from "../utils/TrafficDot";
-import { IoConstructSharp } from "react-icons/io5";
-import { RxCross2 } from "react-icons/rx";
 import { useEffect, useRef, useState } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { MdDarkMode, MdSunny } from "react-icons/md";
+import { HashLink } from "react-router-hash-link";
+import TrafficDot from "../../utils/TrafficDot";
 
 function Navbar({ setState }) {
   const [toggleNav, setToggleNav] = useState(false);
@@ -93,12 +90,12 @@ function Navbar({ setState }) {
 
   return (
     <>
-      <div
-        className={`${!isVisible ? "-translate-y-40" : ""} sticky top-2 z-40 transition-all duration-200 ease-linear`}
+      <header
+        className={`sticky top-0 z-40 transition-all duration-200 ease-linear`}
       >
         {/* Under construction section */}
-        <div
-          className={`${construction ? "block" : "hidden"} relative z-40 mb-2 w-full rounded-md border-l-4 border-l-yellow-600 bg-yellow-200 py-2`}
+        {/* <div
+          className={`${construction ? "block" : "hidden"} relative z-40 w-full border-l-4 border-l-yellow-600 bg-yellow-200 py-2`}
         >
           <RxCross2
             onClick={handleConstructionMsg}
@@ -110,51 +107,53 @@ function Navbar({ setState }) {
               This website is under construction...
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div
-          className={`relative flex h-[69px] w-full items-center rounded-xl border-[1px] border-deepNaviBlue/10 bg-white px-8 shadow-sm backdrop-blur-md  dark:border-gray-700 dark:bg-darkMode-background/90`}
+          className={` border-[1px] py-2 border-deepNaviBlue/10 bg-white/80 shadow-sm backdrop-blur-md  dark:border-gray-700 dark:bg-darkMode-background/90`}
         >
-          <nav className="flex w-full items-center justify-between ">
-            <TrafficDot />
-            <ul
-              className={`${toggleNav ? "block" : "hidden"} absolute left-0 top-20 z-10 w-full rounded-xl 
-             bg-white px-2 py-6 shadow-md dark:bg-gray-700 md:static md:top-0 md:z-0 md:flex md:items-center md:justify-center md:bg-transparent md:p-0 md:shadow-none md:dark:bg-transparent`}
-            >
-              {NavElements.map((data) => (
-                <li
-                  key={data.id}
-                  className="mx-4 cursor-pointer rounded-md p-2  transition-all duration-150 
-                 ease-in hover:bg-black/5 dark:text-darkMode-textGray hover:dark:bg-darkMode-textGray/15 md:mx-2"
-                >
-                  <HashLink onClick={scrollToTop} to={data.path}>
-                    <span className="pl-2 md:pl-0">{data.item}</span>
-                  </HashLink>
-                </li>
-              ))}
-            </ul>
-            <button>
-              {darkMode ? (
-                <MdDarkMode
-                  onClick={toggleDarkMode}
-                  className=" cursor-pointer dark:text-darkMode-textGray"
-                />
-              ) : (
-                <MdSunny
-                  onClick={toggleDarkMode}
-                  className=" cursor-pointer dark:text-yellow-500"
-                />
-              )}
-            </button>
-          </nav>
-          <div ref={navReference}>
-            <HiOutlineMenuAlt3
-              onClick={toggleNavbar}
-              className={`ml-6 cursor-pointer text-2xl dark:text-darkMode-textGray md:hidden`}
-            />
+          <div className="max-w-6xl mx-auto">
+            <nav className="flex w-full items-center justify-between ">
+              <TrafficDot />
+              <ul
+                className={`${toggleNav ? "block" : "hidden"} absolute left-0 top-20 z-10 w-full rounded-xl 
+              bg-white px-2 py-6 shadow-md dark:bg-gray-700 md:static md:top-0 md:z-0 md:flex md:items-center md:justify-center md:bg-transparent md:p-0 md:shadow-none md:dark:bg-transparent`}
+              >
+                {NavElements.map((data) => (
+                  <li
+                    key={data.id}
+                    className="mx-4 cursor-pointer rounded-md p-2  transition-all duration-150 
+                  ease-in hover:bg-black/5 dark:text-darkMode-textGray hover:dark:bg-darkMode-textGray/15 md:mx-2"
+                  >
+                    <HashLink onClick={scrollToTop} to={data.path}>
+                      <span className="pl-2 md:pl-0">{data.item}</span>
+                    </HashLink>
+                  </li>
+                ))}
+              </ul>
+              <button>
+                {darkMode ? (
+                  <MdDarkMode
+                    onClick={toggleDarkMode}
+                    className=" cursor-pointer dark:text-darkMode-textGray"
+                  />
+                ) : (
+                  <MdSunny
+                    onClick={toggleDarkMode}
+                    className=" cursor-pointer dark:text-yellow-500"
+                  />
+                )}
+              </button>
+            </nav>
+            <div ref={navReference}>
+              <HiOutlineMenuAlt3
+                onClick={toggleNavbar}
+                className={`ml-6 cursor-pointer text-2xl dark:text-darkMode-textGray md:hidden`}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </header>
     </>
   );
 }

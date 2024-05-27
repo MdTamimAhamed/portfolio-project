@@ -1,4 +1,4 @@
-import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import RoundedMedia from "../utils/RoundedMedia";
 

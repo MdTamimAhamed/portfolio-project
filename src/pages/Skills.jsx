@@ -1,40 +1,39 @@
 import {
-  FaReact,
-  FaHtml5,
+  FaBootstrap,
   FaCss3Alt,
   FaGitAlt,
   FaGithub,
-  FaBootstrap,
-  FaLinux,
+  FaHtml5,
   FaJava,
+  FaLinux,
+  FaReact,
 } from "react-icons/fa";
 
 import {
-  SiExpress,
-  SiRedux,
-  SiSass,
-  SiMui,
-  SiAdobexd,
   SiAdobeillustrator,
   SiAdobephotoshop,
   SiAdobepremierepro,
+  SiAdobexd,
+  SiExpress,
+  SiMui,
   SiPostman,
+  SiRedux,
+  SiSass,
   SiVisualstudiocode,
 } from "react-icons/si";
 
+import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
+import { CgFigma } from "react-icons/cg";
+import { DiMongodb } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
+import {
+  IoLogoFirebase,
+  IoLogoJavascript,
+  IoLogoNodejs,
+} from "react-icons/io5";
 import { MdCheck } from "react-icons/md";
 import { RiNotionFill } from "react-icons/ri";
 import { SiTailwindcss } from "react-icons/si";
-import {
-  IoLogoJavascript,
-  IoLogoNodejs,
-  IoLogoFirebase,
-} from "react-icons/io5";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { GrMysql } from "react-icons/gr";
-import { CgFigma } from "react-icons/cg";
-import { DiMongodb } from "react-icons/di";
-import { BiLogoSpringBoot } from "react-icons/bi";
 
 function Skills() {
   const FrontendSkillIcons = [
