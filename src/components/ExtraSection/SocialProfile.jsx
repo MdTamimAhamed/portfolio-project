@@ -1,3 +1,4 @@
+import { AiFillBehanceCircle } from "react-icons/ai";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 function SocialProfile() {
@@ -26,29 +27,36 @@ function SocialProfile() {
       text: "Instagram",
       address: "https://www.instagram.com/tamim_ahamed_zan/",
     },
+    {
+      id: 5,
+      icon: <AiFillBehanceCircle />,
+      text: "Behance",
+      address: "https://www.behance.net/tamimahamed",
+    },
   ];
   return (
     <section className="mt-10 text-xl font-bold p-8 border-2 border-slate-100 rounded-2xl">
-      <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-6 text-3xl dark:text-darkMode-textGray md:gap-4 md:text-[26px]">
+      <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-8 text-3xl ">
         {socialData.map((item) => (
-          <div className=" group relative overflow-hidden z-10 basis-1/4 flex items-center border-slate-100 border-2 p-2 rounded-full">
-            <figure className="bg-black w-10 h-10 flex items-center justify-center rounded-full">
-              <a
-                className="cursor-pointer transition-all duration-150 text-white ease-in hover:text-primary"
-                href={item.address}
-                target="_blank"
-              >
+          <a
+            className="cursor-pointer text-white basis-1/4"
+            href={item.address}
+            target="_blank"
+            key={item.id}
+          >
+            <div className=" group hover:cursor-pointer relative overflow-hidden z-10  flex items-center border-slate-100 border-2 p-2 rounded-full">
+              <figure className="bg-black w-10 h-10 flex text-2xl items-center justify-center rounded-full">
                 {item.icon}
-              </a>
-            </figure>
-            <p className="ml-6 font-medium text-lg group-hover:text-white">
-              {item.text}
-            </p>
-            <span
-              className="absolute inset-0 -z-10 before:block before:w-0 before:h-full before:bg-black 
-              before:rounded-full   group-hover:before:w-full before:transition-all before:duration-300 before:ease-in"
-            ></span>
-          </div>
+              </figure>
+              <p className="ml-6 font-medium text-lg text-black group-hover:text-white">
+                {item.text}
+              </p>
+              <span
+                className="absolute inset-0 -z-10 before:block before:w-0 before:h-full before:bg-black dark:before:bg-white
+                  before:rounded-full group-hover:before:w-full before:transition-all before:duration-500 before:ease-in-out"
+              ></span>
+            </div>
+          </a>
         ))}
       </div>
     </section>

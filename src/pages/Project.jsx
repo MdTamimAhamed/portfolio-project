@@ -1,4 +1,6 @@
-import OptionBtn from "../utils/OptionBtn";
+import { useState } from "react";
+import RoundedDropdownBtn from "../components/reUseable/buttons/RoundedDropdownBtn";
+import RoundedFilterBtn from "../components/reUseable/buttons/RoundedFilterBtn";
 import ProjectCard from "../utils/ProjectCard";
 
 import Thumbnail1 from "/assets/images/Project1.png";
@@ -6,6 +8,7 @@ import Thumbnail from "/assets/images/commingsoon.jpg";
 import Thumbnail2 from "/assets/images/project2.png";
 
 function Project() {
+  const [filter, setFilter] = useState("");
   const ProjectDetails = [
     {
       id: 1,
@@ -64,19 +67,19 @@ function Project() {
     <>
       <section
         id="projects"
-        className="mt-10 w-full rounded-2xl px-6 py-12 font-inter dark:bg-darkMode-background"
+        className="mt-10 w-full rounded-2xl p-8  font-inter dark:bg-darkMode-background border-slate-100 border-2"
       >
         <h1 className="pb-4 text-xl font-bold text-deepNaviBlue dark:text-darkMode-textGray">
           Projects
         </h1>
+
         <div className="flex flex-wrap gap-2">
-          <OptionBtn name="All" />
-          <OptionBtn name="Web Projects" dropdown={true} />
-          <OptionBtn name="UI Projects" dropdown={true} />
-          <OptionBtn name="Others" />
+          <RoundedFilterBtn name="All" />
+          <RoundedDropdownBtn name="Web Projects" />
+          <RoundedFilterBtn name="Others" />
         </div>
 
-        <div className="mt-4 grid gap-8 md:grid-cols-2 ">
+        <div className="mt-4 grid gap-8 md:grid-cols-2">
           {ProjectDetails.map((data) => (
             <ProjectCard
               key={data.id}
@@ -84,6 +87,7 @@ function Project() {
               title={data.title}
               description={data.des}
               category={data.category}
+              setState={setFilter}
             />
           ))}
         </div>

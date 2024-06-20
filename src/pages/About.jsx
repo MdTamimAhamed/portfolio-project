@@ -1,5 +1,4 @@
-import CTABtn from "../utils/CTABtn";
-
+import CallToActionBtn from "../components/reUseable/buttons/CallToActionBtn";
 function About() {
   return (
     <section
@@ -8,8 +7,8 @@ function About() {
     >
       <main className=" rounded-2xl  md:col-span-2 md:row-span-2  lg:col-span-3 ">
         <article className="flex items-center justify-between">
-          <div className="basis-[90%] mr-12">
-            <h3 className="text-2xl font-medium leading-4 mt-8 tracking-tight dark:text-darkMode-textGray sm:leading-none">
+          <div className=" basis-[90%] mr-12">
+            <h3 className="text-2xl font-medium leading-4 mt-3 tracking-tight dark:text-darkMode-textGray sm:leading-none">
               Hello there,
             </h3>
             <h1
@@ -27,16 +26,17 @@ function About() {
               and Node.js.
             </p>
             <div className="mt-16 flex items-center justify-between  gap-4 md:justify-start">
-              <CTABtn
+              <CallToActionBtn
                 cta_name="Resume"
+                pdfFile="/assets/Downloadable/Tamim Ahamed Updated Resume.pdf"
                 border={false}
                 icon_visivility={false}
               />
-              <CTABtn
+              <CallToActionBtn
                 cta_name="Projects"
                 link="#projects"
-                border={true}
-                icon_visivility={true}
+                border
+                icon_visivility
               />
             </div>
           </div>
