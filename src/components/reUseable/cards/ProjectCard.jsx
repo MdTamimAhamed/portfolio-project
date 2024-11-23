@@ -37,7 +37,7 @@ function ProjectCard({ thumbnail, title, description, category, tech = [] }) {
 
         <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:gap-4 md:flex-col  md:gap-2 lg:flex-row">
           <ProjectCTABtn
-            cta_name="Project Details"
+            cta_name="GitHub"
             border={true}
             icon_visivility={false}
           />
