@@ -1,4 +1,4 @@
-import Accordion from "../utils/Accordion";
+import Accordion from "../components/reUseable/accordions/Accordion";
 
 function FAQ() {
   const FAQAndAnswers = [

@@ -7,10 +7,10 @@ export default function RoundedMedia({ icon, link }) {
     >
       <div
         className=" group  group flex h-10 w-10 cursor-pointer items-center 
-      justify-center rounded-full border-[1px] border-deepNaviBlue bg-transparent
+      justify-center rounded-full  bg-primary
         transition-all duration-150 ease-in hover:border-primary hover:bg-primary dark:border-darkMode-textGray/20 hover:dark:border-darkMode-green"
       >
-        <p className="text-base group-hover:text-deepNaviBlue">{icon}</p>
+        <p className="text-base group-hover:text-white dark:text-darkMode-background">{icon}</p>
       </div>
     </a>
   );

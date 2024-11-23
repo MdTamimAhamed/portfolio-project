@@ -10,9 +10,17 @@ export default {
       marck: "'Marck Script','cursive'",
       roboto: "'Roboto','sans-serif'",
       inter: "'Inter','sans-serif'",
+      lato: "'Lato', 'sans-serif'",
     },
     extend: {
       colors: {
+        geminiBg: "#F0F4F9",
+        orangeDeep: "#ff7e5f",
+        orangeLight: "#feb47b",
+        transTitle: "#F3f4F8",
+        deepNavi: "#073d55",
+        svgBG: "#cfe4fc",
+        flatBg: "#F9F9F9",
         primary: "#21DF78",
         secondary: "#0E88DB",
         deepNaviBlue: "#000000",
@@ -35,10 +43,18 @@ export default {
           green: "#21DF78",
         },
       },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+      borderWidth: {
+        1: "1px",
+      },
       screens: {
         mdx: "850px",
+        470: "470px",
+        570: "570px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@nauverse/tailwind-dot-grid-backgrounds")],
 };

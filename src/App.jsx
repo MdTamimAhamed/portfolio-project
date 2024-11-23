@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import SocialProfile from "./components/ExtraSection/SocialProfile";
+import HomeContainer from "./layout/container/HomeContainer";
+
 import Container from "./layout/container/Container";
 import Navbar from "./layout/nav/Navbar";
 import About from "./pages/About";
@@ -16,7 +17,7 @@ function App() {
   const [modalMessage, setModalMessage] = useState(false);
 
   return (
-    <div className={`${darkClass ? "dark" : ""}`}>
+    <div className={`${darkClass ? "dark" : ""} relative font-inter`}>
       <div className={` bg-background  dark:bg-darkMode-primary_bg `}>
         <div
           className={`${modalMessage ? "translate-y-10 opacity-100" : "-translate-y-40 opacity-0"} fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-md bg-green-200 px-8 py-4 
@@ -31,16 +32,18 @@ function App() {
         </div>
 
         <Navbar setState={setDarkClass} />
-        <Container>
-          <About />
-          <SocialProfile />
-          <Education />
-          <Project />
-          <Skills />
-          <Contact setModalMessage={setModalMessage} />
-          <FAQ />
-          <Footer />
-        </Container>
+        <HomeContainer />
+        <div className="">
+          <Container>
+            <Project />
+            <Skills />
+            <About />
+            <Education />
+            <Contact setModalMessage={setModalMessage} />
+            <FAQ />
+            <Footer />
+          </Container>
+        </div>
       </div>
     </div>
   );

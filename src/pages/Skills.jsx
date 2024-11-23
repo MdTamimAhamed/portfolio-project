@@ -4,7 +4,6 @@ import {
   FaGitAlt,
   FaGithub,
   FaHtml5,
-  FaJava,
   FaLinux,
   FaReact,
 } from "react-icons/fa";
@@ -16,180 +15,146 @@ import {
   SiAdobexd,
   SiExpress,
   SiMui,
-  SiPostman,
   SiRedux,
-  SiSass,
-  SiVisualstudiocode,
 } from "react-icons/si";
 
-import { BiLogoPostgresql, BiLogoSpringBoot } from "react-icons/bi";
+import {
+  BiLogoCPlusPlus,
+  BiLogoPostgresql,
+  BiLogoSpringBoot,
+} from "react-icons/bi";
 import { CgFigma } from "react-icons/cg";
 import { DiMongodb } from "react-icons/di";
-import { GrMysql } from "react-icons/gr";
+import { FaJava } from "react-icons/fa6";
+import { HiDatabase, HiOutlineCode } from "react-icons/hi";
 import {
   IoLogoFirebase,
   IoLogoJavascript,
   IoLogoNodejs,
 } from "react-icons/io5";
-import { MdCheck } from "react-icons/md";
-import { RiNotionFill } from "react-icons/ri";
-import { SiTailwindcss } from "react-icons/si";
+import { MdLaptopMac } from "react-icons/md";
+import { RiSparkling2Fill } from "react-icons/ri";
+import {
+  SiDaisyui,
+  SiPython,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { VscVersions } from "react-icons/vsc";
+import SectionTitle from "../components/reUseable/bigTitle/SectionTitle";
+import ShowSkillIcons from "../components/reUseable/skillset/ShowSkillIcons";
 
 function Skills() {
   const FrontendSkillIcons = [
     { id: 1, icon: <FaReact />, iconName: "React" },
     { id: 2, icon: <SiTailwindcss />, iconName: "Tailwind" },
-    { id: 3, icon: <IoLogoJavascript />, iconName: "Javascript" },
-    { id: 4, icon: <FaGitAlt />, iconName: "Git" },
-    { id: 5, icon: <FaGithub />, iconName: "Github" },
-    { id: 6, icon: <FaHtml5 />, iconName: "HTML" },
-    { id: 7, icon: <FaCss3Alt />, iconName: "CSS" },
-    { id: 8, icon: <SiSass />, iconName: "SASS" },
-    { id: 9, icon: <FaBootstrap />, iconName: "Bootstrap" },
-    { id: 10, icon: <SiMui />, iconName: "Material UI", status: "Learning" },
-    { id: 11, icon: <SiRedux />, iconName: "RTK" },
+    { id: 3, icon: <FaHtml5 />, iconName: "HTML" },
+    { id: 4, icon: <FaCss3Alt />, iconName: "CSS" },
+    { id: 5, icon: <FaBootstrap />, iconName: "Bootstrap" },
+    { id: 6, icon: <SiMui />, iconName: "Material UI" },
+    { id: 7, icon: <SiDaisyui />, iconName: "Daisyui" },
+    { id: 8, icon: <SiRedux />, iconName: "RTK" },
   ];
 
   const BackendSkills = [
-    { id: 1, icon: <FaJava />, iconName: "Java" },
+    { id: 1, icon: <IoLogoNodejs />, iconName: "Node" },
+    { id: 2, icon: <SiExpress />, iconName: "Express" },
+    { id: 3, icon: <DiMongodb />, iconName: "MongoDB" },
     {
-      id: 2,
-      icon: <BiLogoSpringBoot />,
-      iconName: "Spring Boot",
-      status: "Learning",
-    },
-    { id: 3, icon: <IoLogoNodejs />, iconName: "Node" },
-    { id: 4, icon: <SiExpress />, iconName: "Express" },
-    { id: 5, icon: <DiMongodb />, iconName: "MongoDB" },
-    {
-      id: 6,
+      id: 4,
       icon: <BiLogoPostgresql />,
       iconName: "PostgreSQL",
     },
-    { id: 7, icon: <GrMysql />, iconName: "MySQL" },
     {
-      id: 8,
+      id: 5,
       icon: <IoLogoFirebase />,
       iconName: "Firebase",
+    },
+    {
+      id: 6,
+      icon: <BiLogoSpringBoot />,
+      iconName: "Spring Boot",
       status: "Exploring",
     },
   ];
 
   const ExtraSkillIcons = [
-    { id: 1, icon: <CgFigma />, iconName: "Figma" },
-    { id: 2, icon: <SiAdobexd />, iconName: "Adobe XD" },
+    { id: 1, icon: <FaLinux />, iconName: "Linux" },
+    { id: 2, icon: <CgFigma />, iconName: "Figma" },
     { id: 3, icon: <SiAdobeillustrator />, iconName: "Illustrator" },
     {
       id: 4,
       icon: <SiAdobephotoshop />,
       iconName: "Photoshop",
-      status: "Basics",
     },
     { id: 5, icon: <SiAdobepremierepro />, iconName: "Premiere Pro" },
-    { id: 6, icon: <SiPostman />, iconName: "Postman" },
-    { id: 7, icon: <SiVisualstudiocode />, iconName: "VS Code" },
-    { id: 8, icon: <RiNotionFill />, iconName: "Notion" },
-    { id: 9, icon: <FaLinux />, iconName: "Linux" },
+    { id: 6, icon: <SiAdobexd />, iconName: "Adobe XD" },
+  ];
+
+  const ProgrammingLang = [
+    { id: 1, icon: <BiLogoCPlusPlus />, iconName: "C/C++" },
+    { id: 1, icon: <IoLogoJavascript />, iconName: "Javascript" },
+    { id: 1, icon: <SiPython />, iconName: "Python" },
+    { id: 1, icon: <FaJava />, iconName: "Java" },
+    {
+      id: 1,
+      icon: <SiTypescript />,
+      iconName: "Typescript",
+      status: "Learning",
+    },
   ];
 
   return (
     <>
+      <SectionTitle
+        title1="Skill &"
+        title2="Expertise"
+        description="Welcome to my project showcase. Explore my cruated collection of
+          diverse Projects that showcase my passion, dedication and expertise."
+      />
+
       <div
         id="skills"
-        className="mt-10 rounded-2xl bg-white px-6 py-12 dark:bg-darkMode-background dark:text-darkMode-textGray lg:px-16"
+        className=" border-1 dark:border-white/20 px-4 md:px-6 pb-6 lg:p-6 rounded-4xl bg-white dark:bg-darkMode-background dark:text-darkMode-textGray"
       >
-        <h1 className=" pb-4 text-xl font-bold text-deepNaviBlue dark:text-darkMode-textGray">
-          Skills
-        </h1>
+        <ShowSkillIcons
+          icon={<HiOutlineCode />}
+          title="Languages"
+          icons={ProgrammingLang}
+        />
 
-        <div className="flex items-center">
-          <MdCheck className="text-xl dark:text-darkMode-green" />
-          <h1 className=" ml-1 font-medium">Frontend</h1>
+        <div className="lg:my-6">
+          <ShowSkillIcons
+            icon={<MdLaptopMac />}
+            title="Frontend"
+            icons={FrontendSkillIcons}
+          />
         </div>
 
-        {/* Frontend skill ---> iconset */}
-        <figure className="mt-2 grid grid-cols-3 gap-4 sm:grid-cols-4  mdx:grid-cols-5 lg:grid-cols-6">
-          {FrontendSkillIcons.map((data) => (
-            <div
-              className="relative flex h-28 w-full cursor-default flex-col  items-center justify-center rounded-xl border-[1px] border-deepNaviBlue/20 transition-all duration-200 ease-linear
-                  hover:scale-105 hover:bg-primary/10 dark:border-darkMode-textGray/20 hover:dark:bg-darkMode-textGray/10 md:h-32 md:w-32"
-              key={data.id}
-            >
-              <span className="text-4xl">{data.icon}</span>
-              <span className="mt-2 text-sm font-semibold">
-                {data.iconName}
-              </span>
-
-              {data.status ? (
-                <span className="absolute top-0 rounded-sm bg-green-300/20 px-2 text-xs font-medium  text-green-500 dark:bg-green-300/10">
-                  {data.status}
-                </span>
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
-        </figure>
-
-        <div className="mt-8 flex items-center">
-          <MdCheck className="text-xl dark:text-darkMode-green " />
-          <h1 className="ml-1 font-medium">Backend</h1>
+        <div className="lg:my-6">
+          <ShowSkillIcons
+            icon={<HiDatabase />}
+            title="Backend"
+            icons={BackendSkills}
+          />
         </div>
 
-        {/* Backend skill ---> iconset */}
-        <figure className="mt-2 grid grid-cols-3 gap-4 sm:grid-cols-4  mdx:grid-cols-5 lg:grid-cols-6">
-          {BackendSkills.map((data) => (
-            <div
-              key={data.id}
-              className="relative flex h-28 w-full cursor-default  flex-col items-center justify-center rounded-xl
-              border-[1px] border-deepNaviBlue/20 transition-all duration-200
-              ease-linear hover:scale-105 hover:bg-primary/10 dark:border-darkMode-textGray/20 hover:dark:bg-darkMode-textGray/10 md:h-32 md:w-32"
-            >
-              <span className="text-4xl">{data.icon}</span>
-              <span className="mt-2 text-sm font-semibold">
-                {data.iconName}
-              </span>
-
-              {data.status ? (
-                <span className="absolute top-0 rounded-sm bg-green-300/20 px-2 text-xs font-medium  text-green-500 dark:bg-green-300/10">
-                  {data.status}
-                </span>
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
-        </figure>
-
-        <div className="mt-8 flex items-center">
-          <MdCheck className="text-xl dark:text-darkMode-green " />
-          <h1 className="ml-1 font-medium">Complementary</h1>
+        <div className="lg:my-6">
+          <ShowSkillIcons
+            icon={<VscVersions />}
+            title="Version Control"
+            icons={[
+              { id: 1, icon: <FaGitAlt />, iconName: "Git" },
+              { id: 2, icon: <FaGithub />, iconName: "Github" },
+            ]}
+          />
         </div>
 
-        {/* Extra skill ---> iconset */}
-        <figure className="mt-2 grid grid-cols-3 gap-4 sm:grid-cols-4  mdx:grid-cols-5 lg:grid-cols-6">
-          {ExtraSkillIcons.map((data) => (
-            <div
-              key={data.id}
-              className="relative flex h-28 w-full cursor-default  flex-col items-center justify-center rounded-xl
-              border-[1px] border-deepNaviBlue/20 transition-all duration-200
-              ease-linear hover:scale-105 hover:bg-primary/10 dark:border-darkMode-textGray/20 hover:dark:bg-darkMode-textGray/10 md:h-32 md:w-32"
-            >
-              <span className="text-4xl">{data.icon}</span>
-              <span className="mt-2 text-sm font-semibold">
-                {data.iconName}
-              </span>
-
-              {data.status ? (
-                <span className="absolute top-0 rounded-sm bg-green-300/20 px-2 text-xs font-medium  text-green-500 dark:bg-green-300/10">
-                  {data.status}
-                </span>
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
-        </figure>
+        <ShowSkillIcons
+          icon={<RiSparkling2Fill />}
+          title="Complementary"
+          icons={ExtraSkillIcons}
+        />
       </div>
     </>
   );

@@ -2,8 +2,8 @@ export default function SocialButton({ icon, ctaName, link }) {
   return (
     <div
       className=" dark:border-darkMode-textGray/20  hover:dark:border-darkMode-green group flex h-10 cursor-pointer 
-    items-center justify-center rounded-full border-[1px] border-deepNaviBlue
-      bg-transparent px-6 transition-all duration-150 ease-in hover:border-primary hover:bg-primary"
+    items-center justify-center rounded-full border-1 
+      bg-white px-6 transition-all duration-150 ease-in dark:bg-white/30 dark:hover:bg-primary hover:border-primary hover:bg-primary"
     >
       <a
         href={link}

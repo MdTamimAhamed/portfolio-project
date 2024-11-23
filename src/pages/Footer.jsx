@@ -1,6 +1,6 @@
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-import RoundedMedia from "../utils/RoundedMedia";
+import RoundedMedia from "../components/reUseable/roundedMediaIcons/RoundedMedia";
 
 function Footer() {
   return (

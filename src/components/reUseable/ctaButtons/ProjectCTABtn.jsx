@@ -6,10 +6,10 @@ function ProjectCTABtn({ cta_name, border, icon_visivility }) {
     <div
       className={`${
         border
-          ? "dark:border-darkMode-textGray/30 hover:dark:border-darkMode-green dark:text-darkMode-textGray hover:dark:text-darkMode-background border-[1px] border-deepNaviBlue bg-transparent hover:border-primary hover:bg-primary"
+          ? "dark:border-darkMode-textGray/30 hover:dark:border-darkMode-green dark:text-darkMode-textGray hover:dark:text-darkMode-background border-1 border-slate-300 bg-transparent hover:border-primary hover:bg-primary"
           : "dark:bg-darkMode-textGray dark:text-darkMode-background hover:dark:bg-darkMode-green bg-deepNaviBlue text-white hover:bg-primary hover:text-deepNaviBlue"
       } 
-    group flex h-12 w-full cursor-pointer items-center justify-center rounded-xl px-6 font-medium  transition-all duration-150 ease-in md:h-10 md:w-full`}
+    group flex h-12 w-full cursor-pointer items-center justify-center rounded-xl px-6 font-medium  transition-all duration-150 ease-in md:h-12 md:w-full`}
     >
       {cta_name === "Resume" ? (
         <a href="https://www.google.com" target="_blank">
