@@ -45,7 +45,7 @@ function Home() {
                 <p className="text-gray-400 leading-3 sm:leading-5 text-[1.3rem] xs:text-2xl sm:text-3xl">
                   <Typewriter
                     options={{
-                      strings: ["Hey! Hi,", "Welcome to my portfolio!"],
+                      strings: ["Hey! Hi,", "I'm Tamim Ahamed"],
                       autoStart: true,
                       loop: true,
                       cursor: "",
@@ -56,7 +56,7 @@ function Home() {
                 </p>
                 <h1
                   className="mt-4 text-transparent tracking-tight text-[2.1rem] sm:text-5xl font-bold bg-gradient-to-r from-sky-600 via-60% via-gradientRose to-gradientRose bg-clip-text animate-wavy">
-                  I'm Tamim Ahamed.
+                  Fullstack Developer
                 </h1>
                 <p className="mt-4 text-gray-600 dark:text-white/70 md:text-justify">
                   A Full-stack Developer & UI Designer from Bangladesh.
